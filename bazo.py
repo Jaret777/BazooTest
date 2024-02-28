@@ -1,5 +1,5 @@
 import os
-#stop war
+#stop shitcoding pls
 from typing import Optional, List
 from enum import Enum
 
