@@ -48,7 +48,7 @@ llm_kwargs = {
     "function_call": {"name": openai_functions[0]["name"]}
 }
 
-# Ollama mode has a bug where it infintely generates newlines. This stop sequence hack fixes it
+# Ollama mode has a bug where it infintely generates newlines.ebat This stop sequence hack fixes it
 llm = OllamaFunctions(temperature=0, model="llama2", timeout=300, stop=["\n\n\n\n"])
 # llm = ChatOpenAI(temperature=0, model="gpt-4-1106-preview")
 # llm = AnthropicFunctions(temperature=0, model="claude-2")
