@@ -31,7 +31,7 @@ class Email(BaseModel):
     topic: str = Field(..., description="High level description of what the email is about")
     tone: ToneEnum = Field(..., description="The tone of the email.")
 
-
+#basu basu lick
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", "You are an expert researcher."),
