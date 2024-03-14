@@ -10,6 +10,9 @@ from langchain_experimental.llms.ollama_functions import OllamaFunctions
 from langchain_experimental.llms.anthropic_functions import AnthropicFunctions
 from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
 from langchain.pydantic_v1 import BaseModel, Field
+from langchain_experimental.llms.ollama_functions import OllamaFunctions
+from langchain_experimental.llms.anthropic_functions import AnthropicFunctions
+from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
 from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
 from langchain.pydantic_v1 import BaseModel, Field
 from langchain.chat_models import ChatOpenAI
@@ -33,6 +36,9 @@ class Email(BaseModel):
     action_items: List[str] = Field(..., description="A list of action items requested by the email")
     topic: str = Field(..., description="High level description of what the email is about")
     tone: ToneEnum = Field(..., description="The tone of the email.")
+    ender_phone_number: Optional[str] = Field(None, description="The sender's phone number, if available")
+    sender_address: Optional[str] = Field(None, description="The sender's address, if available")
+    action_items: List[str] = Field(..., description="A list of action items requested by the email")
 
 #basu basu lick
 prompt = ChatPromptTemplate.from_messages(
